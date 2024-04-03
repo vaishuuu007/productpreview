@@ -24,24 +24,31 @@
                 margin: 10px;
                 cursor: pointer;
             }
+
+            .product-img-container{
+                display: flex;
+                justify-content: center;
+            }
+            .title{
+                text-align: center;
+            }
         </style>
     </head>
     <body>
+        <h1 class="title">Multiple Color Punjabi Dresses</h1>
    <img src="image1.jpeg" id="main-img" class="main-img"/>
   <div class="product-img-container">
-       <img src="image1.jpeg" class="product-image"/>
-       <img src="image.jpeg" class="product-image"/>
-       <img src="image2.jpeg" class="product-image"/>
-       <img src="image3.jpeg" class="product-image"/>
-       <img src="image4.jpeg" class="product-image"/>
-
-
-
+       <img src="image1.jpeg" class="product-image" onclick="changeImage('image1.jpeg')"/>
+       <img src="image.jpeg" class="product-image" onclick="changeImage('image.jpeg')"/>
+       <img src="image2.jpeg" class="product-image" onclick="changeImage('image2.jpeg')"/>
+       <img src="image3.jpeg" class="product-image" onclick="changeImage('image3.jpeg')"/>
+       <img src="image4.jpeg" class="product-image" onclick="changeImage('image4.jpeg')"/>
   </div>
-
     </body>
-
     <script>
-
+     function changeImage(imageName){
+    const mainImage = document.getElementById('main-img');
+      mainImage.src = imageName;
+}
     </script>
 </html>
